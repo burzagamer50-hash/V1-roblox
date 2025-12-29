@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prison Panel - Log In</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <div class="login-box" role="form" aria-labelledby="loginTitle">
+      <h1 id="loginTitle">Log In</h1>
+      <p class="subtitle">Staff Access Only</p>
+
+      <input class="input" id="username" type="text" placeholder="Roblox Username" />
+      <input class="input" id="password" type="password" placeholder="Password" />
+
+      <button class="button" type="button" onclick="login()">Log In</button>
+
+      <div id="error" class="error" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

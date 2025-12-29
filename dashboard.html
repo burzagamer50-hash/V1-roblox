@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prison Panel - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation" aria-label="Main Sidebar">
+      <div class="profile">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="username" id="sidebarUsername">Username</div>
+        <div class="rank" id="sidebarRank">Rank</div>
+      </div>
+
+      <nav class="menu" role="menu" id="mainMenu">
+        <!-- Search -->
+        <button class="menu-item" data-min-rank="1" onclick="showPage('search')" role="menuitem">
+          <span class="icon">🔎</span>
+          <span class="label">Search</span>
+        </button>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <!-- Ban group -->
+        <div class="menu-group">
+          <button class="menu-item" data-min-rank="1" onclick="showPage('ban')" role="menuitem">
+            <span class="icon">🚫</span><span class="label">Ban</span>
+          </button>
+          <button class="menu-item sub-item" data-min-rank="1" onclick="showPage('ban-logs')" role="menuitem">
+            <span class="label">Ban Logs</span>
+          </button>
+
+          <button class="menu-item" data-min-rank="11" onclick="showPage('pban')" role="menuitem">
+            <span class="icon">⛔</span><span class="label">P-Ban</span>
+          </button>
+          <button class="menu-item" data-min-rank="11" onclick="showPage('blacklist')" role="menuitem">
+            <span class="icon">📛</span><span class="label">Blacklist</span>
+          </button>
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <!-- Promote / Demote -->
+        <div class="menu-group">
+          <button class="menu-item" data-min-rank="9" onclick="showPage('promote')" role="menuitem">
+            <span class="icon">⬆️</span><span class="label">Promote</span>
+          </button>
+          <button class="menu-item sub-item" data-min-rank="9" onclick="showPage('demote')" role="menuitem">
+            <span class="label">Demote</span>
+          </button>
+          <button class="menu-item sub-item" data-min-rank="9" onclick="showPage('promote-logs')" role="menuitem">
+            <span class="label">Promote Logs</span>
+          </button>
+          <button class="menu-item sub-item" data-min-rank="9" onclick="showPage('demote-logs')" role="menuitem">
+            <span class="label">Demote Logs</span>
+          </button>
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <!-- Kick & Chat -->
+        <button class="menu-item" data-min-rank="1" onclick="showPage('kick')" role="menuitem">
+          <span class="icon">👢</span><span class="label">Kick</span>
+        </button>
+        <button class="menu-item sub-item" data-min-rank="1" onclick="showPage('chat-logs')" role="menuitem">
+          <span class="label">Chat Logs</span>
+        </button>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <!-- Staff Password -->
+        <button class="menu-item" data-min-rank="10" onclick="showPage('staff-password')" role="menuitem">
+          <span class="icon">🔐</span><span class="label">Staff Password</span>
+        </button>
+
+        <!-- Rank Editor (secret) - only ChiefOfStaff+ -->
+        <button class="menu-item" id="rankEditorBtn" data-min-rank="13" onclick="showPage('rank-editor')" role="menuitem" title="Edit Rank Permissions (Chief Of Staff+)">
+          <span class="icon">🛠️</span><span class="label">Rank Editor</span>
+        </button>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <!-- Logout -->
+        <button class="menu-item" onclick="logout()" role="menuitem">
+          <span class="icon">⎋</span><span class="label">Log Out</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content" id="content" role="main">
+      <div class="header">
+        <h1 id="pageTitle">Welcome</h1>
+      </div>
+
+      <section id="pageArea">
+        <p>Select An Option From The Sidebar</p>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
+<script src="dashboard.js"></script>
+
+  
+
